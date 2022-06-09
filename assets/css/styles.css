@@ -1,0 +1,461 @@
+/*============ GOOGLE FONTS ============*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+:root {
+  --header-height: 4.5rem;
+
+  /* HSL color mode */
+  --primary-color-soft-red: hsl(7, 99%, 70%);
+  --primary-color-yellow: hsl(51, 100%, 49%);
+  --primary-color-dark-cyan: hsl(167, 40%, 24%);
+  --primary-color-dark-blue: hsl(198, 62%, 26%);
+  --primary-color-moderate-cyan: hsl(168, 34%, 41%);
+
+  --neutral-dark-blue: hsl(212, 27%, 19%);
+  --neutral-dark-grayish-blue: hsl(213, 9%, 39%);
+  --neutral-grayish-blue: hsl(210, 4%, 67%);
+  --white-color: hsl(0, 0%, 100%);
+
+  /*============ Font and typography ============*/
+  --body-font: "Barlow", sans-serif;
+  --title-font: "Fraunces", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*============ Font weight ============*/
+  --font-medium: 600;
+  --font-semi-bold: 700;
+  --font-bold: 900;
+
+  /*============ Margins Bottom ============*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+}
+
+/*============ Responsive Typography ============*/
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*============ BASE ============*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--title-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input {
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button {
+  cursor: pointer !important;
+}
+
+input {
+  outline: none;
+}
+
+/*============ REUSABLE CSS CLASSES ============*/
+.section {
+  margin-bottom: var(--mb-2-5);
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: var(--mb-2);
+}
+
+.content {
+  text-align: center;
+  padding: 5rem var(--mb-2-5);
+}
+
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.grid {
+  display: grid;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/*============ HEADER ============*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: transparent;
+}
+
+/*============ NAV ============*/
+.nav {
+  height: calc(var(--header-height) + 1.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 2.5rem 0rem 0rem;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--white-color);
+}
+
+.nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav__menu {
+  position: relative;
+  min-height: 270px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2.5rem auto;
+  row-gap: 2rem;
+}
+
+.nav__link {
+  color: var(--primary-color-dark-cyan);
+}
+
+.nav__contact {
+  padding: 15px 30px;
+  background-color: var(--primary-color-yellow);
+  border-radius: 30px;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+}
+
+/*============ HOME ============*/
+.home {
+  height: calc(50vh);
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home__data {
+  display: block;
+  margin: calc(var(--header-height) + 1rem) 0 0 0;
+}
+
+.home__data-title {
+  text-align: center;
+  font-size: var(--biggest-font-size);
+  color: var(--white-color);
+}
+
+.home__data,
+.home__arrow {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home__img {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  height: 50vh;
+}
+
+/*============ BUTTONS ============*/
+.button {
+  display: block;
+  margin: 0 auto;
+  color: var(--primary-color-dark-cyan);
+  font-size: var(--normal-font-size);
+  width: 88px;
+  margin-top: var(--mb-1) !important;
+}
+
+.button-yellow {
+  border-bottom: var(--primary-color-yellow) 3px solid;
+}
+
+.button-pink {
+  border-bottom: var(--primary-color-soft-red) 3px solid;
+}
+
+/*============ DESIGN ============*/
+.graphic__container,
+.photography__container {
+  position: relative;
+}
+
+.column__title {
+  font-size: 2rem;
+  margin-bottom: var(--mb-1-5);
+}
+
+.column__information {
+  position: absolute;
+  bottom: -2rem;
+  text-align: center;
+  z-index: 999;
+}
+
+.column__image {
+  padding: 0 !important;
+  gap: 0;
+}
+
+.column__title,
+.column__information {
+  color: var(--primary-color-dark-cyan);
+}
+
+/*============ TESTIMONIALS ============*/
+.testimonial__title {
+  text-align: center;
+  color: var(--neutral-grayish-blue);
+  letter-spacing: 2px;
+}
+
+.testimonial__description {
+  margin-bottom: var(--mb-1-5);
+  line-height: 1.75rem;
+  color: var(--primary-color-dark-cyan);
+}
+
+.testimonial__person-name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-1);
+}
+
+.testimonial__person-job {
+  color: var(--neutral-grayish-blue);
+}
+
+.testimonial__image {
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+/*============ GALLERY ============*/
+.gallery__container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*============ FOOTER ============*/
+.footer {
+  position: relative;
+  background-color: #91d3c5;
+}
+
+.footer__container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer__title {
+  font-family: var(--body-font);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primary-color-dark-cyan);
+}
+
+.footer__list {
+  display: flex;
+  justify-content: space-around;
+  color: var(--primary-color-moderate-cyan);
+}
+
+.socials__list {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  gap: 1.5rem;
+  z-index: 99;
+}
+
+@media screen and (min-width: 700px) {
+  .section {
+    margin-bottom: 0;
+  }
+
+  .about__container,
+  .team__container,
+  .design__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .about__image {
+    grid-area: a;
+  }
+
+  .about__data {
+    grid-area: b;
+  }
+
+  .about__container {
+    grid-template-areas: "b a";
+  }
+
+  .column__information {
+    bottom: -3rem;
+  }
+
+  .testimonial__title {
+    margin-top: var(--mb-2-5);
+  }
+
+  .testimonial__container,
+  .gallery__container {
+    display: flex;
+  }
+
+  .content__container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        background-color: var(--white-color);
+        top: 0;
+        right: -100%;
+        width: 60vw;
+        margin: var(--header-height) 2rem;
+        height: 35vh;
+        box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+        padding: 1rem;
+        transition: 0.4s;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .nav__menu {
+    right: 0;
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
+    min-height: initial;
+  }
+
+  .nav__list {
+      align-items: center;
+    margin: 0;
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+
+  .nav__link {
+    color: var(--white-color);
+  }
+
+  .nav__contact {
+    background-color: var(--white-color);
+    color: var(--primary-color-dark-cyan);
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+}
+
+
+
+.show-menu {
+  right: 0;
+}
