@@ -172,6 +172,10 @@ input {
   color: var(--white-color);
 }
 
+.nav__logo-image:hover {
+    transform: scale(1.1);
+}
+
 .nav__toggle {
   font-size: 1.2rem;
   cursor: pointer;
@@ -192,6 +196,23 @@ input {
 
 .nav__link {
   color: var(--primary-color-dark-cyan);
+}
+
+.nav__link.on-white {
+    color: var(--primary-color-dark-cyan) !important;
+}
+
+.nav__link.on-white:hover {
+    color: black !important;
+}
+
+.nav__logo-image.on-white {
+    filter: invert(100%) !important;
+}
+
+.nav__contact.on-white {
+    background-color: var(--primary-color-dark-blue);
+    color: var(--white-color) !important;
 }
 
 .nav__link:hover {
