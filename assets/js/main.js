@@ -17,6 +17,7 @@ document.addEventListener('scroll', function(e) {
     if (list.length > 0) {
         $("#header .nav__link").addClass('on-white');
         $(".nav__logo-image").addClass('on-white');
+        $("#nav-toggle").addClass('on-white');
         /*
         $("#header .nav__link").css("color", "var(--primary-color-dark-cyan)");
         $(".nav__logo-image").css("filter", "invert(100%)");
@@ -32,6 +33,7 @@ document.addEventListener('scroll', function(e) {
         */
         $("#header .nav__link").removeClass('on-white');
         $(".nav__logo-image").removeClass('on-white');
+        $("#nav-toggle").removeClass('on-white');
+
     }
-    console.log(list.length);
 });

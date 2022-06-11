@@ -198,6 +198,10 @@ input {
   color: var(--primary-color-dark-cyan);
 }
 
+#nav-toggle.on-white img {
+    filter: invert(100%) !important;
+}
+
 .nav__link.on-white {
     color: var(--primary-color-dark-cyan) !important;
 }
@@ -254,7 +258,7 @@ input {
 .home__arrow {
   margin-left: auto;
   margin-right: auto;
-  z-index: 999;
+  z-index: 1;
 }
 
 .home__img {
@@ -459,6 +463,12 @@ input {
     box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
     padding: 1rem;
     transition: 0.4s;
+    z-index: 999;
+  }
+
+  .nav {
+      justify-content: space-between;
+      margin: 0rem 2.5rem;
   }
 }
 
